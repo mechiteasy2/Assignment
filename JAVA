@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class HealthManagementSystem {
+    private static int age;
+    private static int weight;
+    private static int height;
+    private static double bmi;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        age = scanner.nextInt();
+
+        System.out.print("Enter your weight (in kg): ");
+        weight = scanner.nextInt();
+
+        System.out.print("Enter your height (in cm): ");
+        height = scanner.nextInt();
+
+        calculateBMI();
+
+        System.out.println("Your BMI is: " + bmi);
+        System.out.println("Remember to consult with a healthcare professional for personalized advice.");
+
+        promotePhysicalActivity();
+        encourageSocialEngagement();
+        ensureMentalWellBeing();
+    }
+
+    private static void calculateBMI() {
+        double heightInMeters = height / 100.0;
+        bmi = weight / (heightInMeters * heightInMeters);
+    }
+
+    private static void promotePhysicalActivity() {
+        System.out.println("Engaging in regular physical activity can improve your overall health.");
+       }
+
+    private static void encourageSocialEngagement() {
+        System.out.println("Staying socially active can enhance your well-being and mental health.");
+
+    }
+
+    private static void ensureMentalWellBeing() {
+        System.out.println("Taking care of your mental well-being is crucial for a better quality of life.");
+
+    }
+}
